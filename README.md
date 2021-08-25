@@ -3,6 +3,9 @@
 ## Description ##
 Welcome to *Alphabet Reverser* project! We provide a simple program required by *Software Systems Analysis and Design* course lab. Our project is a simple python program that gets any string as user input and outputs alphabetical positions of the characters in the reversed input string. It only works with alphabetic strings, throwing an error for other inputs.
 
+## Links to Artifacts ##
+* [RUP Artifact](https://docs.google.com/document/d/1NvzGc7YgpdCWJnEomHVriLlVA9wztOa5/edit?usp=sharing&ouid=106934281615236387751&rtpof=true&sd=true)
+
 ## Features ##
 * reverse input string
 * convert characters to corresponding alphabet position
