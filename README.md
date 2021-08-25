@@ -1,7 +1,9 @@
 # 🎀Linkbrary🎀 #
 
 ## Description ##
-Welcome to *Alphabet Reverser* project! We provide a simple program required by *Software Systems Analysis and Design* course lab. Our project is a simple python program that gets any string as user input and outputs alphabetical positions of the characters in the reversed input string. It only works with alphabetic strings, throwing an error for other inputs.
+Welcome to *Linkbrary Telegram Bot* project!
+Linkbrary helps you to collect links and videos you want to go throw later in one place. Just send the link to the bot!
+Later, if you want to read something, just ask the bot - it will send you random link! Or you can filter by topic, reading time, difficulty of the topic, etc.
 
 ## Links to Artifacts ##
 * [RUP Artifact](https://docs.google.com/document/d/1NvzGc7YgpdCWJnEomHVriLlVA9wztOa5/edit?usp=sharing&ouid=106934281615236387751&rtpof=true&sd=true)
