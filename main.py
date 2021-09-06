@@ -1,6 +1,5 @@
 from collections import defaultdict
 from typing import DefaultDict, Optional, Set
-
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.ext import (
     Updater,
