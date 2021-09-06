@@ -2,7 +2,9 @@
 
 ## Description ##
 Welcome to *Linkbrary Telegram Bot* project!
+
 Want to collect all your links, articles and videos in one place for future reading? Try out **Linkbrary**!
+
 Linkbrary helps you to collect links and videos you want to go throw later in one place. As easy as sending link to the bot.
 Have time for reading? Just ask the bot - it will send you random link! Or specify topic, estimated time of difficulty to get what you want!
 ## Links to Artifacts ##
