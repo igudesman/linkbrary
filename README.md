@@ -7,6 +7,10 @@ Want to collect all your links, articles and videos in one place for future read
 
 Linkbrary helps you to collect links and videos you want to go throw later in one place. As easy as sending link to the bot.
 Have time for reading? Just ask the bot - it will send you random link! Or specify topic, estimated time of difficulty to get what you want!
+
+## Technology Stack ##
+TelegramAPI, Python, Mongodb
+
 ## Links to Artifacts ##
 * [RUP Artifact](https://docs.google.com/document/d/1NvzGc7YgpdCWJnEomHVriLlVA9wztOa5/edit?usp=sharing&ouid=106934281615236387751&rtpof=true&sd=true)
 
