@@ -2,10 +2,9 @@ from telegram.ext import MessageHandler, Filters, Updater, CommandHandler
 import logging
 import config
 import random
-from typing import Dict
+
 
 def main():
-
     updater = Updater(token=config.telegram_api_key)
 
     dispatcher = updater.dispatcher
@@ -14,7 +13,6 @@ def main():
 
     # user id to list of links
     users_storage = {}
-
 
     def start(update, context):
         print(context)
@@ -50,6 +48,7 @@ def main():
 
     updater.start_polling()
     updater.idle()
+
 
 if __name__ == '__main__':
     main()
