@@ -1,5 +1,6 @@
 # Linkbrary #
 ![Tests Passing](https://github.com/igudesman/linkbrary/actions/workflows/test-github-actions.yml/badge.svg)
+![Telegram Bot](https://img.shields.io/badge/bot-%20%20on%20Telegram-2ba2d9.svg)
 
 ## Description ##
 Welcome to *Linkbrary Telegram Bot* project!
