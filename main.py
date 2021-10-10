@@ -11,7 +11,7 @@ def authorized(func):
         if storage.get_user(chat_id):
             func(*args, **kwargs)
         else:
-            BotInterface.bot.send_message(chat_id, 'You have to be authorized! Please, use _/auth_ to continue.')
+            BotInterface.bot.send_message(chat_id, 'You have to be authorized! Please, use _/auth_ to continue.', parse_mode='Markdown')
     return wrapper
 
 
