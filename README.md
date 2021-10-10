@@ -49,9 +49,11 @@ Have time for reading? Just ask the bot - it will send you random link! Or speci
 
 2. Using Linter:
 <img src="https://github.com/igudesman/linkbrary/blob/master/demo/pylint.png" />
+We use Pylint that is a plugin of PyCharm. We have a small amount of warnings, which is fine; but a lot of conventions notice - this is due to tests and import issues that we did not manage to overcome. We will shortly try to conform all conventions practices so that our code looks nice.
 
 3. Using PyTest:
 <img src="https://github.com/igudesman/linkbrary/blob/master/demo/pytest-coverage.png" />
+We set up PyTest with GitHub Actions (you can see badge above), and managed to provide very high coverage. Our next step in testing our product is setting up not only class tests, but interactions tests, where interaction with bot could be fully simulated. However, this requires some cloud environemnts setup and API keys safe management, which was out of this MVP scope.
 
 ## Materials for SSAD Course <a name="materials-for-ssad-course"></a>
 * [RUP Artifact](https://docs.google.com/document/d/1NvzGc7YgpdCWJnEomHVriLlVA9wztOa5/edit?usp=sharing&ouid=106934281615236387751&rtpof=true&sd=true)
