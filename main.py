@@ -31,8 +31,14 @@ class BotInterface(Interface):
 
     @staticmethod
     @bot.message_handler(commands=['auth'])
-    def help(message):
-        BotInterface.bot.send_message(message.chat.id, configs.HELP_MESSAGE, parse_mode='Markdown')
+    def auth(message):
+        BotInterface.bot.send_message(message.chat.id, configs.AUTH, parse_mode='Markdown')
+        storage.add_conversation(message.chat.id, 'AUTH')
+    
+    @staticmethod
+    @bot.message_handler(commands=['stop'])
+    def stop(message):
+        storage.add_conversation(message.chat.id, 'USE')
 
     @staticmethod
     @bot.message_handler(commands=['start'])
@@ -43,18 +49,23 @@ class BotInterface(Interface):
     @staticmethod
     @bot.message_handler(content_types=['text'])
     def add_link(message):
-        try:
-            parsed_text = BotInterface.monkey_link_analyzer.get_link_text(message.text)
-            estimated_time = BotInterface.monkey_link_analyzer.time_estimator(parsed_text)
-            topic = BotInterface.monkey_link_analyzer.get_topic(parsed_text)
-            response = topic.body[0]['classifications'][0]['tag_name']
-            response = f'The classified topic: _{response}_\nEstimated time: {estimated_time}min.'
-        except errors.InvalidUrl:
-            response = 'Invalid URL!'
-        except KeyError:
-            response = 'Oops! Something went wrong. Try to provide topic explicitly.'
+        if storage.get_conversation(message.chat.id) == 'AUTH':
+            storage.add_user(message.chat.id, message.text, '')
+            storage.add_conversation(message.chat.id, 'USE')
+            BotInterface.bot.send_message(message.chat.id, 'The agreement has been sent!')
+        else:
+            try:
+                parsed_text = BotInterface.monkey_link_analyzer.get_link_text(message.text)
+                estimated_time = BotInterface.monkey_link_analyzer.time_estimator(parsed_text)
+                topic = BotInterface.monkey_link_analyzer.get_topic(parsed_text)
+                response = topic.body[0]['classifications'][0]['tag_name']
+                response = f'The classified topic: _{response}_\nEstimated time: {estimated_time}min.'
+            except errors.InvalidUrl:
+                response = 'Invalid URL!'
+            except KeyError:
+                response = 'Oops! Something went wrong. Try to provide topic explicitly.'
 
-        BotInterface.bot.send_message(message.chat.id, response, parse_mode='Markdown')
+            BotInterface.bot.send_message(message.chat.id, response, parse_mode='Markdown')
 
 
 if __name__ == '__main__':
