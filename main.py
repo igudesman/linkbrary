@@ -44,7 +44,7 @@ class BotInterface(Interface):
     @bot.message_handler(commands=['start'])
     @authorized
     def start(message):
-        BotInterface.bot.send_message(message.chat.id, 'Привет, чем я могу тебе помочь?')
+        BotInterface.bot.send_message(message.chat.id, 'Use _/help_ to know more about Linkbrary', parse_mode='Markdown')
 
     @staticmethod
     @bot.message_handler(content_types=['text'])
