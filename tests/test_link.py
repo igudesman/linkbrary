@@ -5,7 +5,7 @@ from unittest import TestCase
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
-from link import Link
+from src.link import Link
 
 
 def test_link_init_custom():
