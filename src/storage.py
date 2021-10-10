@@ -61,7 +61,6 @@ def add_link(link):
     # save link into the database
     db = CLIENT['users']
     collection = db['links']
-    print(link)
     collection.insert_one(link)
     return True
 
