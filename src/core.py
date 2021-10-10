@@ -1,5 +1,5 @@
 from telebot import logger, TeleBot
-from monkeylearn import MonkeyLearn
+
 import logging
 import configs
 import abc
@@ -20,12 +20,3 @@ class Interface(metaclass=abc.ABCMeta):
         raise NotImplementedError()
 
 
-class Analyzer:
-    def __init__(self):
-        self.monkey = MonkeyLearn(configs.MONKEY_TOKEN)
-
-    def get_topic(self, text):
-        raise NotImplementedError()
-
-    def time_estimator(self, text):
-        raise NotImplementedError()

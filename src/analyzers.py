@@ -1,9 +1,19 @@
-
-from core import Analyzer
-import configs
+from monkeylearn import MonkeyLearn
+from configs import TOPIC_CLASSIFIER, MONKEY_TOKEN
 import requests
 from bs4 import BeautifulSoup
 import errors
+
+
+class Analyzer:
+    def __init__(self):
+        self.monkey = MonkeyLearn(MONKEY_TOKEN)
+
+    def get_topic(self, text):
+        raise NotImplementedError()
+
+    def time_estimator(self, text):
+        raise NotImplementedError()
 
 
 class LinkAnalyzer(Analyzer):
@@ -26,7 +36,7 @@ class LinkAnalyzer(Analyzer):
 
     def get_topic(self, text):
         return self.monkey.classifiers.classify(
-            model_id=configs.TOPIC_CLASSIFIER,
+            model_id=TOPIC_CLASSIFIER,
             data=[text]
         )
 
