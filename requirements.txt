@@ -1,0 +1,5 @@
+pytelegrambotapi
+monkeylearn
+beautifulsoup4
+pymongo
+dnspython
