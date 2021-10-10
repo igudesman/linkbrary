@@ -20,6 +20,7 @@ Have time for reading? Just ask the bot - it will send you random link! Or speci
 * [Features](#features)
 * [Technology Stack](#technology-stack)
 * [Project Glossary](#project-glossary)
+* [Project Architecture](#project-architecture)
 * [Code Best Practices](#code-best-practices)
 * [Materials for SSAD Course](#materials-for-ssad-course)
 * [Credits](#credits)
@@ -43,6 +44,9 @@ Have time for reading? Just ask the bot - it will send you random link! Or speci
 * **Link Analyzer Tool** - part of backend app service, which is able to: process links, get link’s text, determine features of a link’s text (topic, estimated time to read/view).
 * **Link Classification Tool** - trained machine learning model for topic classification task.
 * **Links Database** - database of links and custom tags assigned to them.
+
+## Project Architecture <a name="project-architecture"></a>
+<img src="https://github.com/igudesman/linkbrary/blob/master/diagrams/Dynamic Perspective.jpg" />
 
 ## Code Best Practices <a name="code-best-practices"></a>
 1. SOLID Principles:
