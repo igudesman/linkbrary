@@ -1,8 +1,8 @@
 from monkeylearn import MonkeyLearn
-from configs import TOPIC_CLASSIFIER, MONKEY_TOKEN
+from src.configs import TOPIC_CLASSIFIER, MONKEY_TOKEN
 import requests
 from bs4 import BeautifulSoup
-import errors
+import src.errors as errors
 
 
 class Analyzer:
