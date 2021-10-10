@@ -6,7 +6,6 @@
 ![Tests Passing](https://github.com/igudesman/linkbrary/actions/workflows/test-github-actions.yml/badge.svg)
 [![Telegram Bot](https://img.shields.io/badge/bot-%20%20on%20Telegram-2ba2d9.svg)](https://t.me/linkbrary_bot)
 
-## Description <a name="description"></a>
 Welcome to **Linkbrary Bot** project!
 
 Want to collect all your links, articles and videos in one place for future reading? Try out **Linkbrary**!
