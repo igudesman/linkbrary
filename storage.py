@@ -1,13 +1,15 @@
-import os
+import ssl
 import pymongo
 import configs
 import copy
+from link import Link
 
 CLIENT = pymongo.MongoClient(
     f"mongodb+srv://"
     f"{configs.MONGO_USERNAME}"
     f":{configs.MONGO_PASSWORD}"
-    f"@{configs.MONGO_HOST}"
+    f"@{configs.MONGO_HOST}",
+    ssl_cert_reqs=ssl.CERT_NONE
 )
 
 
@@ -55,15 +57,30 @@ def get_conversation(chat_id):
     return status
 
 
-def add_link(link_params):
-    print("CONNECTING TO DB")
+def add_link(link):
     # save link into the database
     db = CLIENT['users']
     collection = db['links']
-    collection.insert_one(link_params)
+    print(link)
+    collection.insert_one(link)
     return True
 
 
 def get_random_link(chat_id):
     # retrieve random link from a database
-    pass
+    db = CLIENT['users']
+    collection = db['links']
+    random_link = list(collection.aggregate([
+        {'$match': {'chat_id': chat_id, 'viewed': False}},
+        {'$sample': {'size': 1}}
+    ]))
+    if len(random_link) == 0:
+        return Link()
+    random_link = random_link[0]
+    link_id = random_link['_id']
+    collection.update_one(
+        {'_id': link_id},
+        {"$set": {'viewed': True}},
+        upsert=True
+    )
+    return Link(dict_params=random_link)
