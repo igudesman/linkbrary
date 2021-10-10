@@ -53,3 +53,17 @@ def get_conversation(chat_id):
     collection_name = db['conversation_status']
     status = collection_name.find({'chat_id': chat_id}).next()['status']
     return status
+
+
+def add_link(link_params):
+    print("CONNECTING TO DB")
+    # save link into the database
+    db = CLIENT['users']
+    collection = db['links']
+    collection.insert_one(link_params)
+    return True
+
+
+def get_random_link(chat_id):
+    # retrieve random link from a database
+    pass

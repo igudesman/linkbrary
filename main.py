@@ -2,7 +2,9 @@ from core import ABC, Interface
 import configs
 from analyzers import LinkAnalyzer
 import errors
+import copy
 import storage
+import urllib.parse
 
 
 def authorized(func):
@@ -56,10 +58,24 @@ class BotInterface(Interface):
         else:
             try:
                 parsed_text = BotInterface.monkey_link_analyzer.get_link_text(message.text)
+                # extract link features
+                url_title = urllib.parse.urlparse(message.text).netloc
                 estimated_time = BotInterface.monkey_link_analyzer.time_estimator(parsed_text)
                 topic = BotInterface.monkey_link_analyzer.get_topic(parsed_text)
-                response = topic.body[0]['classifications'][0]['tag_name']
-                response = f'The classified topic: _{response}_\nEstimated time: {estimated_time}min.'
+                link_topic = topic.body[0]['classifications'][0]['tag_name']
+                response = f'Your link saved: {url_title}\n' \
+                           f'The classified topic: _{link_topic}_\n' \
+                           f'Estimated time: {estimated_time}min.'
+
+                # save link to the database
+                link_params = copy.copy(configs.LINK_TEMPLATE)
+                link_params['title'] = url_title
+                link_params['url'] = message.text
+                link_params['chat_id'] = message.chat.id
+                link_params['topics'] = link_topic
+                link_params['ETR'] = estimated_time
+
+                storage.add_link(link_params)
             except errors.InvalidUrl:
                 response = 'Invalid URL!'
             except KeyError:
