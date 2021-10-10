@@ -30,7 +30,9 @@ Have time for reading? Just ask the bot - it will send you random link! Or speci
 * Getting random unread links
 
 ## Technology Stack <a name="technology-stack"></a>
-TelegramAPI, Python, Mongodb
+* TelegramAPI
+* Python
+* MongoDB
 
 ## Materials for SSAD Course <a name="materials-for-ssad-course"></a>
 * [RUP Artifact](https://docs.google.com/document/d/1NvzGc7YgpdCWJnEomHVriLlVA9wztOa5/edit?usp=sharing&ouid=106934281615236387751&rtpof=true&sd=true)
