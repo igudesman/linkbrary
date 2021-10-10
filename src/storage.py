@@ -1,7 +1,10 @@
+"""
+Module for connection with database strorage - CRUD operations.
+"""
 import ssl
+import copy
 import pymongo
 import configs
-import copy
 from link import Link
 
 CLIENT = pymongo.MongoClient(
@@ -18,8 +21,7 @@ def get_user(chat_id):
     collection_name = db['user_info']
     if collection_name.count_documents({'chat_id': chat_id}) == 0:
         return {}
-    else:
-        return collection_name.find({'chat_id': chat_id}).next()
+    return collection_name.find({'chat_id': chat_id}).next()
 
 
 def add_user(chat_id, email, passphrase):
@@ -44,10 +46,7 @@ def add_conversation(chat_id, status):
         {"$set": {'status': status}},
         upsert=True
     )
-    if result.upserted_id is None:
-        return False
-    else:
-        return True
+    return result.upserted_id is not None
 
 
 def get_conversation(chat_id):

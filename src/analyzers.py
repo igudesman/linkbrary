@@ -2,7 +2,7 @@ from monkeylearn import MonkeyLearn
 from src.configs import TOPIC_CLASSIFIER, MONKEY_TOKEN
 import requests
 from bs4 import BeautifulSoup
-import src.errors as errors
+from src import errors
 
 
 class Analyzer:
