@@ -14,15 +14,20 @@ Linkbrary helps you to collect links and videos you want to go throw later in on
 Have time for reading? Just ask the bot - it will send you random link! Or specify topic, estimated time of difficulty to get what you want!
 
 ## Table of Contents
-1. [Demo](#demo)
-2. [Technology Stack](#technology-stack)
-3. [Materials for SSAD Course](#materials-for-ssad-course)
-4. [Credits](#credits)
+* [Demo](#demo)
+* [Features](#features)
+* [Technology Stack](#technology-stack)
+* [Materials for SSAD Course](#materials-for-ssad-course)
+* [Credits](#credits)
 
 ## Demo <a name="demo"></a>
 ![til](https://github.com/igudesman/linkbrary/blob/master/demo/demoLinkbrary.gif)
 
-## Project Goal
+## Features <a name="features"></a>
+* Universal link storage accessible from anyplatform
+* Automatic links tagging
+* Automatic time to read/view estimation
+* Getting random unread links
 
 ## Technology Stack <a name="technology-stack"></a>
 TelegramAPI, Python, Mongodb
