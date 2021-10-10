@@ -6,7 +6,7 @@
 ![Tests Passing](https://github.com/igudesman/linkbrary/actions/workflows/test-github-actions.yml/badge.svg)
 [![Telegram Bot](https://img.shields.io/badge/bot-%20%20on%20Telegram-2ba2d9.svg)](https://t.me/linkbrary_bot)
 
-# Table of Contents
+## Table of Contents
 1. [Description](#description)
 2. [Demo](#demo)
 3. [Technology Stack](#technology-stack)
