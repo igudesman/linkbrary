@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/igudesman/linkbrary/blob/master/linkbrary_logo_with_text.png" />
+  <img src="https://github.com/igudesman/linkbrary/blob/master/logos/linkbrary_logo_with_text.png" />
 </p>
 
 # Linkbrary Bot #
