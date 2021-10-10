@@ -22,3 +22,8 @@ USER_FORM = {
     'passphrase': '',
     'email': '',
 }
+
+AUTH = '''
+*Data Processing Agreement*
+Provide your _email_ address that will be used for this account. We will send you the agreement for review. Follow the instructions in the email.
+'''
