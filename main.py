@@ -4,9 +4,8 @@ from core import ABC, Interface
 from link import Link
 import configs
 from analyzers import LinkAnalyzer
-from telebot.types import ReplyKeyboardMarkup, InlineKeyboardButton
+from telebot.types import ReplyKeyboardMarkup
 import errors
-import copy
 import storage
 import urllib.parse
 
