@@ -24,7 +24,7 @@ Have time for reading? Just ask the bot - it will send you random link! Or speci
 ![til](https://github.com/igudesman/linkbrary/blob/master/demo/demoLinkbrary.gif)
 
 ## Features <a name="features"></a>
-* Universal link storage accessible from anyplatform
+* Universal link storage accessible from any platform
 * Automatic links tagging
 * Automatic time to read/view estimation
 * Getting random unread links
