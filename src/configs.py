@@ -9,12 +9,20 @@ _Some useful commands:
 /settings — Bot Settings
 _
 '''
-TELEGRAM_TOKEN = os.environ['TOKEN']
-MONKEY_TOKEN = os.environ['MONKEY']
-TOPIC_CLASSIFIER = os.environ['TOPIC_CLASSIFIER']
-MONGO_HOST = os.environ['MONGO_HOST']
-MONGO_USERNAME = os.environ['MONGO_USERNAME']
-MONGO_PASSWORD = os.environ['MONGO_PASSWORD']
+try:
+    TELEGRAM_TOKEN = os.environ['TOKEN']
+    MONKEY_TOKEN = os.environ['MONKEY']
+    TOPIC_CLASSIFIER = os.environ['TOPIC_CLASSIFIER']
+    MONGO_HOST = os.environ['MONGO_HOST']
+    MONGO_USERNAME = os.environ['MONGO_USERNAME']
+    MONGO_PASSWORD = os.environ['MONGO_PASSWORD']
+except KeyError:
+    TELEGRAM_TOKEN = None
+    MONKEY_TOKEN = None
+    TOPIC_CLASSIFIER = None
+    MONGO_HOST = None
+    MONGO_USERNAME = None
+    MONGO_PASSWORD = None
 
 USER_FORM = {
     'chat_id': '',
