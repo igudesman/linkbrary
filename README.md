@@ -6,23 +6,24 @@
 ![Tests Passing](https://github.com/igudesman/linkbrary/actions/workflows/test-github-actions.yml/badge.svg)
 [![Telegram Bot](https://img.shields.io/badge/bot-%20%20on%20Telegram-2ba2d9.svg)](https://t.me/linkbrary_bot)
 
-## Table of Contents
-1. [Description](#description)
-2. [Demo](#demo)
-3. [Technology Stack](#technology-stack)
-4. [Materials for SSAD Course](#materials-for-ssad-course)
-5. [Credits](#credits)
-
 ## Description <a name="description"></a>
-Welcome to *Linkbrary Telegram Bot* project!
+Welcome to **Linkbrary Bot** project!
 
 Want to collect all your links, articles and videos in one place for future reading? Try out **Linkbrary**!
 
 Linkbrary helps you to collect links and videos you want to go throw later in one place. As easy as sending link to the bot.
 Have time for reading? Just ask the bot - it will send you random link! Or specify topic, estimated time of difficulty to get what you want!
 
+## Table of Contents
+1. [Demo](#demo)
+2. [Technology Stack](#technology-stack)
+3. [Materials for SSAD Course](#materials-for-ssad-course)
+4. [Credits](#credits)
+
 ## Demo <a name="demo"></a>
-Demo:
+![til](https://github.com/igudesman/linkbrary/blob/master/demo/demoLinkbrary.gif)
+
+## Project Goal
 
 ## Technology Stack <a name="technology-stack"></a>
 TelegramAPI, Python, Mongodb
